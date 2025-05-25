@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification</title>
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            color: white;
+            text-align: center;
+        }
+
+        /* Notification Box */
+        .notification {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px 40px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        /* Fade-in Animation */
+        .notification.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        /* Close Button */
+        .close-btn {
+            margin-top: 10px;
+            padding: 8px 20px;
+            background: #ff4757;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .close-btn:hover {
+            background: #ff6b81;
+        }
+    </style>
+</head>
+<body>
+    <div class="notification" id="messageBox">
+        <h1 th:text="${msg}">This is a message</h1>
+        <button class="close-btn" onclick="closeMessage()">Close</button>
+    </div>
+
+    <script>
+        // Show message with animation
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(() => {
+                document.getElementById("messageBox").classList.add("show");
+            }, 200); // Delay for smooth animation
+
+            // Auto-close after 5 seconds
+            setTimeout(() => {
+                closeMessage();
+            }, 5000);
+        });
+
+        function closeMessage() {
+            let box = document.getElementById("messageBox");
+            box.style.opacity = "0";
+            setTimeout(() => { box.style.display = "none"; }, 500);
+        }
+    </script>
+</body>
+</html>

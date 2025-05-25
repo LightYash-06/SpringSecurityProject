@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Spring Security</title>
+    <style>
+        /* Reset Default Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Arial", sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Section */
+        header {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        /* Main Content Section */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .content {
+            flex: 1;
+            padding: 2rem;
+            min-width: 300px;
+        }
+
+        .content h2 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .content ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        .content ul li {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+
+        /* Image Section */
+        .image {
+            flex: 1;
+            text-align: center;
+            padding: 2rem;
+            min-width: 300px;
+        }
+
+        .image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Register Button */
+        .register-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #2c3e50;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .register-btn:hover {
+            background: #1a252f;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Spring Security</h1>
+        <p>Secure Your Spring Boot Applications with Ease</p>
+    </header>
+
+    <section class="container">
+        <div class="content">
+            <h2>What is Spring Security?</h2>
+            <p>Spring Security is a powerful authentication and access control framework for Java applications. It provides features such as authentication, authorization, password hashing, and protection against security threats.</p>
+            
+            <h2>Why Use Spring Security?</h2>
+            <ul>
+                <li>🔐 Strong authentication & authorization</li>
+                <li>🛡️ Protection against CSRF, XSS, and session hijacking</li>
+                <li>🔑 Integration with OAuth2, JWT, and LDAP</li>
+                <li>💡 Highly customizable security configurations</li>
+            </ul>
+
+            <h2>How Spring Security Works</h2>
+            <p>Spring Security intercepts requests through a filter chain, authenticates users, and verifies their access rights before allowing access to protected resources.</p>
+
+            <!-- Register Button -->
+            <a href="/Register" class="register-btn">Register Yourself</a>
+        </div>
+        
+        <div class="image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg" alt="Spring Security">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Spring Security Guide | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
